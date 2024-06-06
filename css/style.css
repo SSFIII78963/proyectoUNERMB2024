@@ -7,6 +7,8 @@ html, body{
     width: 100%;
     height: 100%;
 }
+
+/*********************************************Header*********************************************/
 header{
     width: 100%;
     height: 30%;
@@ -30,18 +32,23 @@ header{
 }
 .header ul{
     display: flex;
-    height: 100%;
-    width: 100%;
     justify-content: space-between;
+    height: 100%;
     list-style: none;
     margin: 0;
+    padding-left: 10%;
 }
-.header img{
-    height: 40px;
+.header ul>:first-child{
+    flex-grow: 0.4;
 }
 .header li{
     display: flex;
     align-items: center;
+}
+.header a{
+    height: 60%;
+}
+.header img{
     height: 100%;
 }
 .buscador{
@@ -52,7 +59,7 @@ header{
     border-radius: 20px;
     width: 25%;
     height: 30%;
-    padding: 5px 20px;
+    padding: 0.5% 1%;
 }
 .buscador img{
     height: 100%;
@@ -64,52 +71,40 @@ header{
     width: 98%;
     border: none;
     font-size: 15px;
+    font-family: 'Open Sans';
+    outline: none;
 }
 
+/*********************************************Body*********************************************/
 #colecciones_act{width: 100%;
     height: 400px;
-    background-image: url("img/1.jpg"); 
-    background-repeat: no-repeat;
+    background-image: url("../img/1.jpg"); 
     background-size: cover;
+    background-position: center;
     margin-top: 4rem;
 }
-#revistas{width: 100%;
-    height: 400px;
-    background-color: #000034 ; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 1px solid;
-    border-color: #71cbcf;
-    
-}
-
 #mask{ background-color: #000034;
 width: 100%;
 height: 400px;
-opacity: 0.9;
-
+opacity: 0.8;
 }
-
 .libros{
 width: 15%;
 height:200px;
 padding-left:4%;
 display: inline-block;
-
-
 }
-
 #portadas{ width: auto;
 height: inherit;
 }
 #portadas:hover{
 border: 4px solid ;
-border-color: #71cbcf;
+border-color: #71cbfc;
 }
 .titulos{
 padding-left: 4%;
 padding-top: 4%;
-color: #71cbcf;
+color: #71cbfc;
 font-family: 'Rammetto One';
 }
 .subtitulos{color: white;
@@ -119,32 +114,38 @@ padding-left: 4%;
 padding-top: 0%;
 }
 
+/*********************************************Footer*********************************************/
 footer{
-width: 100%;
-background-color: black;
-border: 1px solid;
-border-color: #71cbcf;
-display: flex;				 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    color: white;
 }
-.footer{
-width: 50%;
-
+footer section{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 5%;
 }
-.other{color: white;
-font-family: 'Open Sans';
-font-size: 12px;
-
+footer section p{
+    text-decoration: underline;
 }
-h3{
-width: auto;
-padding-left: 4%;
-font-family: 'Open Sans';
-font-size: 12px;
+footer section ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.faq{
-color: #71cbcf;
+footer section li{
+    margin-bottom: 15%;
 }
-.icon{
-	width: 40px;
-	align-items: center;
+footer section a{
+    color: #71cbfc;
+}
+footer section div nav ul{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15%;
+}
+footer section div nav ul li a img{
+    height: 50px;
 }
