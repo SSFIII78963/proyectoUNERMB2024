@@ -1,36 +1,41 @@
-*{
+* {
     font-family: OpenSans;
 }
 
-html, body{
+html,
+body {
     background-color: #000034;
     width: 100%;
     height: 100%;
 }
 
 /*********************************************Header*********************************************/
-header{
+header {
     width: 100%;
-    height: 30%;
+    height: 40%;
 }
-#banner{
+
+#banner {
     width: 100%;
-    height: 90%;
+    height: 72%;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 30%;
+    height: 24%;
     border-top: #71cbfc 2px solid;
     border-bottom: #71cbfc 2px solid;
 }
-.header nav{
+
+.header nav {
     width: 25%;
     height: 100%;
 }
-.header ul{
+
+.header ul {
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -38,20 +43,25 @@ header{
     margin: 0;
     padding-left: 10%;
 }
-.header ul>:first-child{
+
+.header ul>:first-child {
     flex-grow: 0.4;
 }
-.header li{
+
+.header li {
     display: flex;
     align-items: center;
 }
-.header a{
+
+.header a {
     height: 60%;
 }
-.header img{
+
+.header img {
     height: 100%;
 }
-.buscador{
+
+.buscador {
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -61,12 +71,14 @@ header{
     height: 30%;
     padding: 0.5% 1%;
 }
-.buscador img{
+
+.buscador img {
     height: 100%;
     padding-right: 2%;
     border-right: 2px black solid;
 }
-.buscador input{
+
+.buscador input {
     margin-left: 2%;
     width: 98%;
     border: none;
@@ -76,76 +88,92 @@ header{
 }
 
 /*********************************************Body*********************************************/
-#colecciones_act{width: 100%;
+#colecciones_act {
+    width: 100%;
     height: 400px;
-    background-image: url("../img/1.jpg"); 
+    background-image: url("../img/1.jpg");
     background-size: cover;
     background-position: center;
-    margin-top: 4rem;
 }
-#mask{ background-color: #000034;
-width: 100%;
-height: 400px;
-opacity: 0.8;
+
+#mask {
+    background-color: #000034a5;
+    width: 100%;
+    height: 400px;
 }
-.libros{
-width: 15%;
-height:200px;
-padding-left:4%;
-display: inline-block;
+
+.libros {
+    width: 15%;
+    height: 200px;
+    padding-left: 4%;
+    display: inline-block;
 }
-#portadas{ width: auto;
-height: inherit;
+
+#portadas {
+    width: auto;
+    height: inherit;
 }
-#portadas:hover{
-border: 4px solid ;
-border-color: #71cbfc;
+
+#portadas:hover {
+    border: 4px solid;
+    border-color: #71cbfc;
 }
-.titulos{
-padding-left: 4%;
-padding-top: 4%;
-color: #71cbfc;
-font-family: 'Rammetto One';
+
+.titulos {
+    padding-left: 4%;
+    padding-top: 4%;
+    margin: 0.2% 0 0 0;
+    color: #71cbfc;
+    font-family: 'Rammetto One';
 }
-.subtitulos{color: white;
-font-family: 'Open Sans';
-font-size: 15px;
-padding-left: 4%;
-padding-top: 0%;
+
+.subtitulos {
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 15px;
+    padding-left: 4%;
+    padding-top: 0%;
 }
 
 /*********************************************Footer*********************************************/
-footer{
+footer {
     display: flex;
     flex-direction: column;
     width: 100%;
     background-color: black;
     color: white;
 }
-footer section{
+
+footer section {
     display: flex;
     justify-content: space-between;
     margin: 2% 5%;
 }
-footer section p{
+
+footer section p {
     text-decoration: underline;
 }
-footer section ul{
+
+footer section ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-footer section li{
+
+footer section li {
     margin-bottom: 15%;
 }
-footer section a{
+
+footer section a {
     color: #71cbfc;
 }
-footer section div nav ul{
+
+footer section div nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 15%;
 }
-footer section div nav ul li a img{
-    height: 50px;
+
+footer section div nav ul li a img {
+    height: 35px;
 }
