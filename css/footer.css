@@ -1,0 +1,74 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: black linear-gradient(180deg, rgb(0 0 0 / 28%), #07078e7d);
+    color: white;
+    padding: 2em 2em 2em 2em;
+    font-size: 10px;
+    height: 15em;
+}
+
+.preguntas-frecuentes ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    list-style: none;
+}
+
+.preguntas-frecuentes a {
+    color: var(--primary-color);
+    transition: all 0.5s;
+}
+
+.preguntas-frecuentes a:hover {
+    color: white;
+}
+.informacion-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+.informacion-contacto p {
+    text-decoration: underline;
+}
+.redes-sociales ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 1em;
+}
+.redes-sociales a{
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+}
+.redes-sociales svg{
+    fill: var(--primary-color);
+    height: 2em;
+    width: 2em;
+
+    transition: all 0.25s linear;
+}
+.redes-sociales svg:hover{
+    fill: white;
+    scale: 125%;
+}
+@media(width>=600px){
+    footer{
+        font-size: 13px;
+    }
+}
+@media(width>=800px){
+    footer{
+        font-size: 15px;
+        padding: 2em 4em 2em 4em;
+    }
+}
+@media(width>=1024px){
+    footer{
+        font-size: 20px;
+        padding: 2em 6em 2em 6em;
+    }
+}

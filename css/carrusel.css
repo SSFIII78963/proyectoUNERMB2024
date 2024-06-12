@@ -1,0 +1,100 @@
+.contenedor-carrusel h1 {
+    color: var(--primary-color);
+    font-family: 'Rammetto One';
+    font-size: 22px;
+    padding-left: 8%;
+    margin: 1em 0;
+
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+
+    background-color: rgba(0, 0, 0, 0.639);
+
+}
+
+.contenedor-carrusel p {
+    color: white;
+    font-size: 15px;
+    padding-top: 2%;
+    margin-bottom: 2em;
+
+    padding-left: 8%;
+}
+
+.carrusel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 10em;
+    overflow: auto;
+    padding-inline-start: 5%;
+    padding-inline-end: 5%;
+
+
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 5%;
+
+    position: relative;
+}
+
+.elemento-carrusel {
+    display: flex;
+    justify-content: center;
+
+    scroll-snap-align: start;
+
+    box-sizing: border-box;
+    padding: 0 5%;
+
+    transition: opacity 0s linear;
+}
+
+.carrusel::-webkit-scrollbar {
+    display: none;
+}
+.elemento-carrusel a{
+    display: flex;
+    width: 100%;
+}
+.elemento-carrusel img {
+    height: 100%;
+    max-width: none;
+    overflow: hidden;
+}
+
+.btn-avanzar,
+.btn-retroceder {
+    display: none;
+}
+
+@media(width>=1024px) {
+    .contenedor-carrusel h1 {
+        font-size: 22px;
+        padding-left: 8%;
+        margin-top: 1em;
+    }
+
+    .carrusel {
+        grid-template-rows: 17em;
+    }
+    .btn-avanzar, .btn-retroceder{
+        display: inline-block;
+        position: absolute;
+        background-color: transparent;
+        border: none;
+
+        width: 3%;
+        height: 20%;
+    }
+    .btn-avanzar:hover, .btn-retroceder:hover{
+        cursor: pointer;
+        background-color: transparent;
+    }
+    .btn-retroceder {
+        top: 50%;
+        left: 2px; 
+    }
+    .btn-avanzar {
+        top: 50%;
+        right: 2px;
+    }
+}
