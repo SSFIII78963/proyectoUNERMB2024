@@ -1,6 +1,6 @@
 <div class="contenedor-carrusel">
 
-    <h1><?= $titulo; ?></h1>
+    <a href="<?=$link_carrusel ?>"><h1><?= $titulo; ?></h1></a>
     <div style="position: relative;">
         <div class="carrusel">
             <div class="elemento-carrusel">

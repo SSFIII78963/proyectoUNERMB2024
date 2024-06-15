@@ -1,0 +1,102 @@
+/*********************************************Colecciones*********************************************/
+.contenedor{
+    padding: 0 4em;    
+}
+#container-colecciones{
+    display:grid;
+    box-sizing: content-box;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 5em repeat(4, 15em);
+    grid-column-gap: 0vw; 
+}
+.elements {
+    display: inline-flex;
+    justify-content: center;
+    padding: 5%;
+}
+.elements a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.buscadorcolecciones{
+    grid-column-end: span 3;
+    align-self: center;
+}
+.contenedor-botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3%;
+    grid-column-end: span 2;
+    gap: 3%;
+}
+.buscar{
+    width: 100%;
+}
+.btnpag{
+    width: 100%;
+    margin: 2vw 0;
+    display: flex;
+    justify-content: center ;
+}
+.pag{
+    width: 3em;
+    height: 3em;
+    border:1px solid #71cbfc;
+    border-radius: 15%;
+    margin-left: 5px;
+    background-color: black;
+    color: white;
+    transition: all 0.5s linear;
+}
+.pag:hover{
+    border:1px solid #71cbfc;
+    background-color: #71cbfc;
+    color: #000037;
+}
+
+.contenedor img:hover{
+    outline: 7px solid var(--primary-color);
+}
+/*********************************************Coleccion*********************************************/
+
+.contenedor2{
+    width: 100vw;
+    box-sizing: border-box;
+    padding-top: 0;
+    overflow: hidden;
+}
+#titulocoleccion{
+    width: 100vw;
+    height: 20vw;
+    display: flex;
+    border: 1px solid #71cbfc;
+    margin-left: 0px;
+    background-image: url(img\2.jpg);
+}
+
+#portadacoleccion{
+    padding: 2vw;
+    justify-content: center;
+}
+
+/*****************************************************Telefono*****************************************/
+@media (width<= 768px){
+    .contenedor{
+        padding: 0 2em;
+    }
+    #container-colecciones{
+        grid-auto-flow: none;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 5em repeat(10, 1fr);
+        overflow: hidden;
+    }
+    .buscadorcolecciones{
+        grid-column-end: span 1;
+    }
+    .contenedor-botones{
+        grid-column-end: span 1;
+    }
+}

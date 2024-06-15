@@ -1,0 +1,138 @@
+.carrusel-principal {
+    width: 100%;
+    height: 30em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.carrusel-principal-mask {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 2em;
+    padding-left: 6em;
+    background-color: #0000347b;
+}
+
+.carrusel-principal-texto {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.contenedor-titulo-descripcion{
+    width: 40em;
+    height: 22em;
+}
+.titulo-descripcion{
+    overflow-wrap: break-word;
+    overflow: hidden;
+    height: 100%;
+}
+.carrusel-principal-texto h1 {
+    color: var(--primary-color);
+    text-shadow: 2px 0px 0px black,
+        0px 2px 0px black,
+        -2px 0px 0px black,
+        0px -2px 0px black;
+    opacity: 1;
+    animation: aparecer-texto 0.2s linear;
+}
+.carrusel-principal-texto p{
+    text-shadow: 1px 0px 0px black,
+    0px 1px 0px black,
+    -1px 0px 0px black,
+    0px -1px 0px black;
+    opacity: 1;
+    animation: aparecer-texto 0.4s linear;
+}
+@keyframes aparecer-texto {
+    from{
+        opacity: 1;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+.carrusel-principal-botones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 4em;
+}
+.carrusel-principal-botones a{
+    display: inline-block; 
+    padding: 0.5em 1.6rem; 
+    text-decoration: none; 
+    color: #fff; 
+    background: #71cbfc;
+    font-weight: 700;
+    border-radius: 10px;
+    text-align: center;
+}
+.carrusel-principal-botones-buttons button{
+    display: inline-block; 
+    padding: 0.5em 1.6rem; 
+    text-decoration: none; 
+    color: #fff; 
+    background: #71cbfc;
+    font-weight: 700;
+    border-radius: 10px;
+    text-align: center;
+}
+.carrusel-principal-botones-buttons button:hover{
+    cursor: pointer;
+}
+.carrusel-principal-thumbnails {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 2em;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.carrusel-principal-thumbnails img{
+    height: 7em;
+    transition: outline 0.2s linear;
+}
+@keyframes aparecer {
+    0%{
+        outline: none;
+    }
+    100%{
+        outline : 7px solid var(--primary-color);
+    }
+}
+@media(width<=780px){
+    .carrusel-principal{
+        background-size: auto;
+    }
+    .carrusel-principal-texto{
+        width: 14em;
+    }
+    .carrusel-principal-mask{
+        padding-left: 2em;
+    }
+    .carrusel-principal-thumbnails{
+        width: auto;
+        padding-left: 2em;
+    }
+    .carrusel-principal-botones {
+        padding-right: 0;
+    }
+    .contenedor-titulo-descripcion{
+        width: 20em;
+        height: 16.5em;
+    }
+    .carrusel-principal-botones a, .carrusel-principal-botones button{
+        font-size: 15px;
+        padding: 0.2em 0.8em;
+    }
+}

@@ -1,17 +1,27 @@
+.contenedor-carrusel{
+    margin-bottom: 1.5em;
+}
+.contenedor-carrusel a {
+    text-decoration: none;
+}
+.contenedor-carrusel h1:hover {
+    color: white;
+}
 .contenedor-carrusel h1 {
     color: var(--primary-color);
     font-family: 'Rammetto One';
     font-size: 22px;
     padding-left: 8%;
     margin: 1em 0;
+    margin-top: 0;
 
     border-top: 1px solid var(--primary-color);
     border-bottom: 1px solid var(--primary-color);
 
     background-color: rgba(0, 0, 0, 0.639);
 
+    transition: all 0.2s linear;
 }
-
 .contenedor-carrusel p {
     color: white;
     font-size: 15px;
@@ -67,10 +77,13 @@
 }
 
 @media(width>=1024px) {
+    .contenedor-carrusel{
+        margin-bottom: 1.5em;
+    } 
     .contenedor-carrusel h1 {
         font-size: 22px;
         padding-left: 8%;
-        margin-top: 1em;
+        margin-top: 0;
     }
 
     .carrusel {

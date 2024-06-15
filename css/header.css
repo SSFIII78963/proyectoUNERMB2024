@@ -61,6 +61,8 @@ svg {
 body {
     background-color: var(--secondary-color);
     font-family: "Open Sans";
+    overflow-x: hidden;
+    color: white;
 }
 
 header {
@@ -165,6 +167,14 @@ input:hover {
 #btn-buscar-pc {
     display: none;
 }
+header svg{
+    transition: all 0.25s linear;
+}
+header svg:hover {
+    display: inline-block;
+    fill: var(--primary-color);
+    scale: 125%;
+}
 
 /*************************************************** PC **********************************************************/
 @media(width>=1024px) {
@@ -198,14 +208,6 @@ input:hover {
     header svg {
         width: 34px;
         height: 34px;
-
-        transition: all 0.25s linear;
-    }
-
-    header svg:hover {
-        display: inline-block;
-        fill: var(--primary-color);
-        scale: 125%;
     }
 
     #home {
