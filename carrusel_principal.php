@@ -36,7 +36,7 @@
         </div>
         <div class="carrusel-principal-thumbnails">
             <img src="img/1.jpg" alt="">
-            <img src="img/2.jpg" alt="">
+            <img src="img/Modelo 5.png" alt="">
             <img src="img/3.jpg" alt="">
             <img src="img/4.jpg" alt="">
         </div>

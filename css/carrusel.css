@@ -71,9 +71,26 @@
     overflow: hidden;
 }
 
-.btn-avanzar,
+.btn-avanzar, .btn-retroceder{
+    display: inline-block;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+
+    width: 3%;
+    height: 20%;
+}
+.btn-avanzar:hover, .btn-retroceder:hover{
+    cursor: pointer;
+    background-color: transparent;
+}
 .btn-retroceder {
-    display: none;
+    top: 50%;
+    left: 2px; 
+}
+.btn-avanzar {
+    top: 50%;
+    right: 2px;
 }
 
 @media(width>=1024px) {
@@ -88,26 +105,5 @@
 
     .carrusel {
         grid-template-rows: 17em;
-    }
-    .btn-avanzar, .btn-retroceder{
-        display: inline-block;
-        position: absolute;
-        background-color: transparent;
-        border: none;
-
-        width: 3%;
-        height: 20%;
-    }
-    .btn-avanzar:hover, .btn-retroceder:hover{
-        cursor: pointer;
-        background-color: transparent;
-    }
-    .btn-retroceder {
-        top: 50%;
-        left: 2px; 
-    }
-    .btn-avanzar {
-        top: 50%;
-        right: 2px;
     }
 }
