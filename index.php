@@ -36,6 +36,7 @@
     ?>
 
     <?php
+    $link_carrusel = "revistas.php";
     $titulo = "Revistas";
     include("carrusel.php");
     ?>

@@ -15,7 +15,6 @@
     box-sizing: border-box;
     border: 1px solid #71cbfc;
     margin-left: 0px;
-    background-image: url(../img/2.jpg);
     background-size: 100vw;
     background-position: center;
     opacity: 1;
@@ -23,14 +22,13 @@
 
 #portadacoleccion{
     width: 12vw;
-    background-image: url("../img/1.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
 }
 #titulocol{
-	font-size: 4vw;
+	font-size: 2vw;
     width: 80vw;
     max-width: 100%;
     margin: 0;
@@ -41,7 +39,7 @@
     font-family: 'Rammetto One';
 }
 #autorcol{
-    font-size: 3vw;
+    font-size: 2vw;
     margin: 0;
     width: 80vw;
     height: 4vw;

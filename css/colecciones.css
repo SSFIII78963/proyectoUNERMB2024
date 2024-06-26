@@ -21,7 +21,7 @@
     justify-content: center;
 }
 .buscadorcolecciones{
-    grid-column-end: span 3;
+    grid-column-end: span 5;
     align-self: center;
 }
 .contenedor-botones{
@@ -59,6 +59,49 @@
 
 .contenedor img:hover{
     outline: 7px solid var(--primary-color);
+}
+.botones-avn-ret{
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	background-color: #000037;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+
+}
+
+#avanzar{
+	width: 10vw;
+	height:auto;
+	margin: 1vw; 
+	border:2px solid #71cbfc;
+	background-color: #000037;
+	color: white;
+	font-family: "Arial";
+	border-radius: 15em;
+	font-size: 1.5vw;
+}
+#avanzar:hover{
+	background-color: #71cbfc;
+	color: #000037;
+	border:2px solid white;
+
+
+}
+#retroceder{
+	width: 10vw;
+	height: auto;
+	margin: 1vw; 
+	border:2px solid #71cbfc;
+	background-color: #000037;
+	color: white;
+	font-family: "Arial";
+	border-radius: 15em;
+	font-size: 1.5vw;
+}
+#retroceder:hover{
+	background-color: #71cbfc;
+	color: #000037;
 }
 /*********************************************Coleccion*********************************************/
 
@@ -98,5 +141,15 @@
     }
     .contenedor-botones{
         grid-column-end: span 1;
+    }
+    #retroceder{
+        width: 20vw;
+        height: 10vw;
+        font-size: 2vw;
+        }
+    #avanzar{
+        width: 20vw;
+        height: 10vw;
+        font-size: 2vw;
     }
 }

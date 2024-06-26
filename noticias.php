@@ -26,12 +26,12 @@
 
                 $conexion = conexion();
 
-                $resultado = $conexion->query("SELECT * FROM colecciones");
+                $resultado = $conexion->query("SELECT * FROM noticias");
 
                 while($row = $resultado->fetch_assoc()){
                     echo "
                         <div class='elements'>
-                            <a href='coleccion.php?id=$row[colecciones_id]'>
+                            <a href='$row[link_noticia]'>
                                 <img src='$row[link_imagen]'>
                             </a>
                         </div>

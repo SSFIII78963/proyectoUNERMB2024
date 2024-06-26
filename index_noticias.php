@@ -1,5 +1,5 @@
 <div class="contenedor_noticias_index">
-    <a href="">
+    <a href="noticias.php">
         <h1>Noticias</h1>
     </a>
     <div class="noticias_index">
