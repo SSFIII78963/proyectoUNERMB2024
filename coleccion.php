@@ -18,19 +18,28 @@
 </head>
 
 <body>
-    <?php include("header.php") ?>
+    <?php include("header.php");
+
+    include("php/conexiondb.php");
+
+    $conexion = conexion();
+
+    $id = $_GET['id'];
+
+    $resultado = $conexion->query("SELECT * FROM colecciones WHERE colecciones_id = '$id' ")->fetch_assoc();
+
+    ?>
 
 
     <div id="titulocoleccion">
         <div id="mask2">
             <div id="portadacoleccion">
-                <img src="img/1.jpg">
+                <img id="portada" src="<?= $resultado['link_imagen'] ?>">
             </div>
 
             <div class="descripcion">
-                <h1 id="titulocol">Coleccion 1 hola fjag faifakf fahfaf </h1>
-                <p id="descripcioncol"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <h2 id="autorcol">Autor: El pecas</h2>
+                <h1 id="titulocol"><?= $resultado['titulo_coleccion'] ?></h1>
+                <p id="descripcioncol"><?= $resultado['sinopsis_coleccion'] ?></p>
             </div>
         </div>
     </div>
@@ -39,111 +48,20 @@
 
     <div id="container-coleccion">
 
+        <?php
 
+        $resultado = $conexion->query("SELECT * FROM libro WHERE coleccion_id = '$id' ");
 
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/Portada-del-libro-Dibujando-mi-ciudad-azul.png">
-            </a>
-        </div>
-
-
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
-        <div class="elementos">
-            <a href="index.php">
-                <img class="portada" src="img/1.jpg">
-            </a>
-        </div>
+        while($row = $resultado->fetch_assoc()){
+            echo "
+                <div class='elementos'>
+                    <a href='libro.php?id=$row[libro_id]'>
+                        <img class='portada' src='$row[link_imagen]'>
+                    </a>
+                </div>
+            ";
+        }
+        ?>
     </div>
 
     <div class="colecbotones">
@@ -162,5 +80,3 @@
 </body>
 
 </html>
-
-

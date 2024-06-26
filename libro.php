@@ -18,26 +18,45 @@
 </head>
 
 <body>
-    <?php include("header.php") ?>
+    <?php include("header.php");
+
+    include("php/conexiondb.php");
+
+    $conexion = conexion();
+
+    $id = $_GET['id'];
+
+    $resultado = $conexion->query("SELECT * FROM libro WHERE libro_id = '$id' ")->fetch_assoc();
+
+    ?>
     <div id="titulocoleccion">
         <div id="mask2">
-            <div id="portadacoleccion"></div>
+            <div id="portadacoleccion">
+                <img id="portada" src="<?= $resultado['link_imagen'] ?>">
+            </div>
 
             <div class="descripcion">
-                <h1 id="titulocol">La divina comedia </h1>
-                <p id="descripcioncol"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <h2 id="autorcol">Autor: El pecas</h2>
+                <h1 id="titulocol"><?= $resultado['titulo'] ?></h1>
+                <p id="descripcioncol"><?= $resultado['sinopsis'] ?></p>
             </div>
         </div>
     </div>
     <div class="libro">
 
-        <iframe id="doc" src="https://drive.google.com/file/d/1QMuM4Ne8SUFro1HglmjHgtUlhcrM9LOj/preview"></iframe>
+        <iframe id="doc" src="<?= $resultado['link_drive'] ?>"></iframe>
 
     </div>
 
     <?php include("footer.php") ?>
     <script src="js/header.js"></script>
+
+    <script>
+        let titulocoleccion = document.querySelector("#titulocoleccion");
+        let img = document.querySelector("#portada").src;
+
+        titulocoleccion.style.backgroundImage = `url(${img})`;
+
+    </script>
 </body>
 
 </html>

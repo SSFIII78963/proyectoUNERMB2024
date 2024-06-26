@@ -32,7 +32,7 @@
                 while ($row = $resultado->fetch_assoc()) {
                     echo "
                 <div class='elements'>
-                <a href='resvista.php?id=$row[revistas_id]'>
+                <a href='revista.php?id=$row[revistas_id]'>
                     <img src='$row[link_imagen]'>
                 </a>
                 <p class='titulo'>$row[titulo]</p>
