@@ -8,7 +8,7 @@ FROM (
     UNION ALL
     SELECT eventos_cientificos_id as id, titulo_evento as titulo, link_imagen, sinopsis_evento as sinopsis, fecha, 'evento_cientifico' as fuente FROM eventos_cientificos
 ) AS registros_combinados
-ORDER BY fecha DESC LIMIT 5";
+ORDER BY fecha DESC LIMIT 4";
 $resultado = $conexion->query($query);
 
 
