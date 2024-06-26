@@ -22,29 +22,50 @@
             <input type="search" placeholder="Buscar" class="buscadorcolecciones">
 
             <?php
-                include("php/conexiondb.php");
+            include("php/conexiondb.php");
 
-                $conexion = conexion();
+            $conexion = conexion();
 
-                $resultado = $conexion->query("SELECT * FROM eventos_cientificos");
+            // Obtén el índice de la página actual (por ejemplo, desde una variable GET o POST)
+            $pagina_actual = isset($_GET['pagina']) ? intval($_GET['pagina']) : 0;
 
-                while($row = $resultado->fetch_assoc()){
-                    echo "
+            // Calcula el offset para la consulta
+            $offset = $pagina_actual * 20;
+            $total_eventos_cientificos = $conexion->query("SELECT COUNT(*) AS total_registros FROM eventos_cientificos")->fetch_assoc();
+
+            // Consulta la base de datos para obtener las siguientes 20 eventos_cientificos
+            $resultado = $conexion->query("SELECT * FROM eventos_cientificos ORDER BY eventos_cientificos_id DESC LIMIT 20 OFFSET $offset");
+
+            while ($row = $resultado->fetch_assoc()) {
+                echo "
                         <div class='elements'>
                             <a href='evento_cientifico.php?id=$row[eventos_cientificos_id]'>
                                 <img src='$row[link_imagen]'>
                             </a>
                         </div>
                     ";
-                }
+            }
             ?>
         </div>
 
         <div class="botones-avn-ret">
 
 
-            <button id="retroceder">Re. Página</button>
-            <button id="avanzar">Av. Página</button>
+            <?php
+
+            if ($pagina_actual > 0) {
+                echo '<a href="?pagina=' . ($pagina_actual - 1) . '" id="retroceder">Retroceder</a>';
+            }
+
+            $total_paginas = ceil($total_eventos_cientificos['total_registros'] / 20);
+
+            // Verifica si la página actual es menor que el total de páginas
+            if ($pagina_actual < $total_paginas - 1) {
+                // Muestra el botón de "avanzar"
+                echo '<a href="?pagina=' . ($pagina_actual + 1) . '" id="avanzar">Avanzar</a>';
+            }
+
+            ?>
 
 
         </div>

@@ -80,7 +80,6 @@
     outline: 7px solid var(--primary-color);
 }
 .botones-avn-ret{
-	width: 100vw;
 	display: flex;
 	justify-content: center;
 	background-color: #000037;
@@ -99,6 +98,8 @@
 	font-family: "Arial";
 	border-radius: 15em;
 	font-size: 1.5vw;
+    text-decoration: none;
+    text-align: center;
 }
 #avanzar:hover{
 	background-color: #71cbfc;
@@ -117,6 +118,8 @@
 	font-family: "Arial";
 	border-radius: 15em;
 	font-size: 1.5vw;
+    text-decoration: none;
+    text-align: center;
 }
 #retroceder:hover{
 	background-color: #71cbfc;

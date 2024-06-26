@@ -27,6 +27,9 @@
     background-position: center;
 
 }
+#portada{
+    height: 100%;
+}
 #titulocol{
 	font-size: 2vw;
     width: 80vw;

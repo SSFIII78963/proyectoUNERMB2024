@@ -61,7 +61,6 @@
     outline: 7px solid var(--primary-color);
 }
 .botones-avn-ret{
-	width: 100vw;
 	display: flex;
 	justify-content: center;
 	background-color: #000037;
@@ -80,6 +79,8 @@
 	font-family: "Arial";
 	border-radius: 15em;
 	font-size: 1.5vw;
+    text-align: center;
+    text-decoration: none;
 }
 #avanzar:hover{
 	background-color: #71cbfc;
@@ -98,6 +99,8 @@
 	font-family: "Arial";
 	border-radius: 15em;
 	font-size: 1.5vw;
+    text-align: center;
+    text-decoration: none;
 }
 #retroceder:hover{
 	background-color: #71cbfc;
@@ -133,23 +136,24 @@
     #container-colecciones{
         grid-auto-flow: none;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 5em repeat(10, 1fr);
         overflow: hidden;
     }
     .buscadorcolecciones{
-        grid-column-end: span 1;
+        grid-column-end: span 2s;
     }
     .contenedor-botones{
         grid-column-end: span 1;
     }
     #retroceder{
         width: 20vw;
-        height: 10vw;
+        height: 5vw;
         font-size: 2vw;
+        padding: 1%;
         }
     #avanzar{
         width: 20vw;
-        height: 10vw;
+        height: 5vw;
         font-size: 2vw;
+        padding: 1%;
     }
 }
