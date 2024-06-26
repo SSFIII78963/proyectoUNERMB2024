@@ -44,7 +44,7 @@
                                 </g>
                             </svg>
                         </a></li>
-                    <li id="botones-pc"><a href="">
+                    <li id="botones-pc"><a href="revistas.php">
                             <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Capa_1"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 viewBox="0 0 226.696 226.696" xml:space="preserve">
@@ -62,7 +62,7 @@
                                 </g>
                             </svg>
                         </a></li>
-                    <li id="botones-pc"><a href="">
+                    <li id="botones-pc"><a href="eventos_cientificos.php">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -89,7 +89,7 @@
                             </svg>
                         </a></li>
                     <li id="botones-pc">
-                        <a href="">
+                        <a href="noticias.php">
                             <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 viewBox="0 0 512 512" xml:space="preserve" stroke="#ffffff">
@@ -236,7 +236,7 @@
                             </g>
                         </svg>
                     </a></li>
-                <li><a href="">
+                <li><a href="revistas.php">
                         <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Capa_1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             viewBox="0 0 226.696 226.696" xml:space="preserve">
@@ -254,7 +254,7 @@
                             </g>
                         </svg>
                     </a></li>
-                <li><a href="">
+                <li><a href="eventos_cientificos.php">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -278,7 +278,7 @@
                         </svg>
                     </a></li>
                 <li>
-                    <a href="">
+                    <a href="noticias.php">
                         <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 viewBox="0 0 512 512" xml:space="preserve" stroke="#ffffff">

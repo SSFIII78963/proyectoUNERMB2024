@@ -1,15 +1,14 @@
 <footer>
     <nav class="preguntas-frecuentes">
         <ul>
-            <li><a href="#">¿Quienes Somos?</a></li>
-            <li><a href="#">Funciones del Fondo Editorial</a></li>
-            <li><a href="#">¿Cómo puedo publicar mis libros?</a></li>
-            <li><a href="#">Página Oficial de la UNERMB</a></li>
+            <li><a href="faq.php">¿Quienes Somos?</a></li>
+            <li><a href="faq.php">Funciones del Fondo Editorial</a></li>
+            <li><a href="faq.php">¿Cómo puedo publicar mis libros?</a></li>
+            <li><a href="https://unermb.web.ve/" target="_blank" rel="noopener">Página Oficial de la UNERMB</a></li>
         </ul>
     </nav>
     <div class="informacion-contacto">
         <p style="text-decoration: none;">Contactanos:</p>
-        <p>Teléfono: 0000-0000000</p>
         <p>Correo: comiteeditorialunermb@gmail.com</p>
         <nav class="redes-sociales">
             <ul>

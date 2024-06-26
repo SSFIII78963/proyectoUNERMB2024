@@ -1,0 +1,91 @@
+
+.faq{
+	width: 100vw;
+	margin-top: 2vw;
+}
+.preguntasyrespuestas{
+	width: 100vw;
+	height: auto;
+	max-width: 100vw;
+	text-align: center;
+	margin-bottom: 2vw;
+
+}
+.preguntas{
+	width: 90vw;
+	height: 5em;
+	text-align: left;
+	padding: 2vw;
+	background-color: #000028;
+	border: 2px solid #000028;
+	color: white;
+	border-radius: 15px;
+
+}
+.preguntas:hover{
+	cursor: pointer;
+	background-color: #31cbfc;
+	border: 2px solid #31cbfc;
+	color: #000037;
+}
+
+.respuestas{
+	width: 90vw;
+	max-width: 90vw;
+	height: 15vw;
+	max-height: 15vw;
+	overflow: scroll;
+	display: none;
+	margin-top: 2vw;
+	margin-left: 5vw;
+	background-color: #000028;
+	border: 2px solid #000028;	
+	color: white;
+	border-radius: 15px;
+	text-align: justify;
+}
+
+/*******+equipo del fondo****/
+.crew{
+	width: 100vw;
+	border-top: 1px solid #31cbfc;
+	border-bottom: 1px solid #31cbfc;
+	display: flex;
+}
+#imgcrew{
+	width: 35vw;
+	padding-left: 2vw;
+}
+
+.crew-mates{
+	padding-left: 2vw;
+	color: white;
+}
+h1{
+	font-family: "Rammetto One";
+	font-size: 1.5em;
+	color: #31cbfc;
+}
+h2{
+	font-family: "Rammetto One";
+	font-size: 1em;
+	color: #31cbfc;
+
+}
+p{
+	font-family: "Open Sans";
+	font-size: 0.8em;
+}
+
+@media (width<=768px){
+
+	#imgcrew{
+		width: 10vw;
+		height: 10vw;
+		position: center;
+	}
+	.crew{
+		padding-bottom: 2vw;
+
+	}
+}

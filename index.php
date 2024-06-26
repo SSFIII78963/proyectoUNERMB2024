@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fondo Editorial</title>
 
     <link href='https://fonts.googleapis.com/css?family=Rammetto One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
@@ -22,6 +22,9 @@
 <body>
     <?php
     include("header.php");
+    include ("php/conexiondb.php");
+
+    $conexion = conexion();
     ?>
     <?php
     include ("carrusel_principal.php");

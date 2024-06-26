@@ -1,0 +1,249 @@
+*{
+	margin: 0px;
+/**	background-color: #000037;*/
+}
+
+.contenedor2{
+    width: 100vw;
+    box-sizing: border-box;
+    padding-top: 0;
+    overflow: hidden;
+}
+#titulocoleccion{
+    width: 100vw;
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #71cbfc;
+    margin-left: 0px;
+    background-image: url(../img/2.jpg);
+    background-size: 100vw;
+    background-position: center;
+    opacity: 1;
+}
+
+#portadacoleccion{
+   width: 12vw;
+    background-image: url("../img/portadahorizontal.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#titulocol{
+	font-size: 4vw;
+    width: 80vw;
+    max-width: 100%;
+    margin: 0;
+    color: #71cbfc;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: 'Rammetto One';
+}
+#autorcol{
+    font-size: 3vw;
+    margin: 0;
+    width: 80vw;
+    height: 4vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #71cbfc;
+    font-family: 'Rammetto One';
+
+}
+.descripcion{
+    padding-left: 2vw;
+    box-sizing: content-box;
+}
+#descripcioncol{
+    box-sizing: border-box;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+    font-size: 1.5vw;
+    width: 80vw;
+    height: 6vw;
+    max-height: 10vw;
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+}
+#mask2 {
+    background-color: #000034a5;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2vw;
+    display: inline-flex;
+}
+/**********************************************Cuerpo de las colecciones*****************/
+#container-coleccion{
+	width: 100vw;
+	height: auto;
+	background-color: #000037;
+    display:grid;
+    box-sizing: content-box;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 1vw; 
+    grid-row-gap: 2vw; 
+    justify-content: center;  
+}
+.elementos {
+	margin: 2vw;
+	width: 14.5vw;
+    display: inline-flex;
+    padding:0px;
+}
+.portada{
+    height: 100%;
+    overflow: hidden;
+
+}
+.portada:hover{
+	outline:5px solid #71cbfc;
+}
+#container-coleccion a{
+	display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.colecbotones{
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	background-color: #000037;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+
+}
+
+#avanzar{
+	width: 10vw;
+	height:auto;
+	margin: 1vw; 
+	border:2px solid #71cbfc;
+	background-color: #000037;
+	color: white;
+	font-family: "Arial";
+	border-radius: 15em;
+	font-size: 1.5vw;
+}
+#avanzar:hover{
+	background-color: #71cbfc;
+	color: #000037;
+	border:2px solid white;
+
+
+}
+#retroceder{
+	width: 10vw;
+	height: auto;
+	margin: 1vw; 
+	border:2px solid #71cbfc;
+	background-color: #000037;
+	color: white;
+	font-family: "Arial";
+	border-radius: 15em;
+	font-size: 1.5vw;
+}
+#retroceder:hover{
+	background-color: #71cbfc;
+	color: #000037;
+	border:2px solid white;
+}
+
+
+
+
+
+
+
+
+/******dispositivos moviles***********************/
+
+
+
+
+@media(width<=768px){
+    #titulocoleccion{
+    width: 100vw;
+    height: 40vw;
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #71cbfc;
+    margin-left: 0px;
+    background-image: url(../img/2.jpg);
+    background-size: 100vw;
+    background-position: center;
+    opacity: 1;
+    }
+
+    #portadacoleccion{
+    width: 30vw;
+    }
+    #titulocol{
+    font-size: 4vw;
+    width: 60vw;
+    max-width: 100%;
+    margin: 0;
+    color: #71cbfc;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: 'Rammetto One';
+    }
+    #descripcioncol{
+    box-sizing: border-box;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+    font-size: 3vw;
+    width: 60vw;
+    height: auto;
+    padding-bottom: 1vw;
+    max-height: 25vw;
+    white-space: pre-line;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    color: white;
+    }
+    #autorcol{
+    font-size: 3vw;
+    margin: 0;
+    width: 60vw;
+    height: 4vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #71cbfc;
+    font-family: 'Rammetto One';
+
+    }
+    #container-coleccion{
+    width: 100vw;
+    height: auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1vw; 
+    grid-row-gap: 1vw; 
+    padding-top: 2vw;
+    }
+    .elementos {
+    margin: 2vw;
+    width: 40vw;
+    display: inline-flex;
+    padding-left: 4vw;
+    }
+    #retroceder{
+    width: 20vw;
+    height: 5vw;
+    font-size: 2vw;
+    }
+    #avanzar{
+    width: 20vw;
+    height: 5vw;
+    font-size: 2vw;
+    }
+
+}

@@ -1,58 +1,59 @@
 <div class="contenedor-carrusel">
 
-    <a href="<?=$link_carrusel ?>"><h1><?= $titulo; ?></h1></a>
+    <a href="<?= $link_carrusel ?>">
+        <h1><?= $titulo; ?></h1>
+    </a>
     <div style="position: relative;">
         <div class="carrusel">
-            <div class="elemento-carrusel">
-                <a href="#">
-                    <img src="img/Portada-del-libro-Dibujando-mi-ciudad-azul.png" alt="">
-                </a>
-            </div>
-            <div class="elemento-carrusel">
-                <a href="">
-                    <img src="img/2.jpg" alt="">
-                </a>
-            </div>
-            <div class="elemento-carrusel">
-                <a href="">
-                    <img src="img/3.jpg" alt="">
-                </a>
-            </div>
-            <div class="elemento-carrusel">
-                <a href="">
-                    <img src="img/4.jpg" alt="">
-                </a>
-            </div>
-            <div class="elemento-carrusel">
-                <a href="">
-                    <img src="img/5.jpg" alt="">
-                </a>
-            </div>
-            <div class="elemento-carrusel">
-                <a href="">
-                    <img src="img/6.jpg" alt="">
-                </a>
-            </div>
-            <div class="elemento-carrusel">
-                <a href="">
-                    <img src="img/1.jpg" alt="">
-                </a>
-            </div>
-            <div class="elemento-carrusel">
-                <a href="">
-                    <img src="img/Portada-del-libro-Dibujando-mi-ciudad-azul.png" alt="">
-                </a>
-            </div>
-            <div class="elemento-carrusel">
-                <a href="">
-                    <img src="img/Portada-del-libro-Mi-proyecto-2-1536x962.png" alt="">
-                </a>
-            </div>
-            <div class="elemento-carrusel">
-                <a href="">
-                    <img src="img/4.jpg" alt="">
-                </a>
-            </div>
+            <?php
+
+            switch ($titulo) {
+                case 'Colecciones Actualizadas':
+                    $resultado = $conexion->query("SELECT * FROM colecciones ORDER BY  colecciones_id DESC LIMIT 10");
+
+                    while ($row = $resultado->fetch_assoc()) {
+                        echo "
+                    <div class='elemento-carrusel'>
+                        <a href='coleccion.php?id=$row[colecciones_id]'>
+                            <img src='$row[link_imagen]'>
+                        </a>
+                    </div>
+                    ";
+                    }
+                    break;
+                case 'Revistas':
+                    $resultado = $conexion->query("SELECT * FROM revistas ORDER BY  revistas_id DESC LIMIT 10");
+
+                    while ($row = $resultado->fetch_assoc()) {
+                        echo "
+                    <div class='elemento-carrusel'>
+                        <a href='revista.php?id=$row[revistas_id]'>
+                            <img src='$row[link_imagen]'>
+                        </a>
+                    </div>
+                    ";
+                    }
+                    break;
+                case 'Eventos Científicos':
+                    $resultado = $conexion->query("SELECT * FROM eventos_cientificos ORDER BY  eventos_cientificos_id DESC LIMIT 10");
+
+                    while ($row = $resultado->fetch_assoc()) {
+                        echo "
+                    <div class='elemento-carrusel'>
+                        <a href='evento_cientifico.php?id=$row[eventos_cientificos_id]'>
+                            <img src='$row[link_imagen]'>
+                        </a>
+                    </div>
+                    ";
+                    }
+                    break;
+                default:
+                    # code...
+                    break;
+            }
+
+
+            ?>
         </div>
         <button class="btn-retroceder">
             <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.00024000000000000003" transform="rotate(180)">
