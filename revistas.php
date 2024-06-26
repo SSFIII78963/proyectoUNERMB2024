@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fondo Editorial</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/revistas.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <script src="js/header.js"></script>
+    <link rel="stylesheet" href="css/revistas.css">
     <link rel="shortcut icon" href="img/Logo Fondo Editorial.png" type="image/x-icon">
 </head>
 
@@ -17,9 +16,6 @@
     <?php include "header.php" ?>
     <div class="contenedor">
         <div id="container-revistas">
-            <div class="contenedor-botones">
-                <input type="search" placeholder="Buscar..." class="buscar_revistas">
-            </div>
 
             <?php
 
@@ -43,7 +39,6 @@
                 <a href='revista.php?id=$row[revistas_id]'>
                     <img src='$row[link_imagen]'>
                 </a>
-                <p class='titulo'>$row[titulo]</p>
                 </div>
                 ";
             }
@@ -72,7 +67,7 @@
 
     </div>
     <?php include "footer.php" ?>
-    <script src="js/revistas.js"></script>
+    
     <script src="js/header.js"></script>
 </body>
 

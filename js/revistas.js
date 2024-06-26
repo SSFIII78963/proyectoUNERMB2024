@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
     const filterSelect = document.getElementById('filter-select');
     const elements = document.querySelectorAll('.elements');
 
@@ -14,3 +14,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+ */

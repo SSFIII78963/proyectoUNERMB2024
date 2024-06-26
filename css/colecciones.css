@@ -6,7 +6,7 @@
     display:grid;
     box-sizing: content-box;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: 5em repeat(4, 15em);
+    grid-template-rows: repeat(4, 15em);
     grid-column-gap: 0vw; 
 }
 .elements {

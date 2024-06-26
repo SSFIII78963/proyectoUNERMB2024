@@ -205,9 +205,9 @@
                     </g>
                 </svg>
             </button>
-            <div id="btn-buscar-pc">
-                <input type="search" placeholder="Buscar...">
-                <button>
+            <form id="btn-buscar-pc" method="get" action="buscar_header.php">
+                <input type="search" placeholder="Buscar..." name="titulo">
+                <button type="submit">
                     <svg fill="#ffffff" width="256px" height="256px" viewBox="-2 0 19 19" xmlns="http://www.w3.org/2000/svg"
                     class="cf-icon-svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -219,7 +219,7 @@
                     </g>
                 </svg>
                 </button>
-            </div>
+            </form>
         </div>
         <div class="botones">
             <ul>
@@ -382,7 +382,7 @@
                 </li>
             </ul>
         </div>
-        <div class="buscador">
-            <input type="search" placeholder="Buscar...">
-        </div>
+        <form class="buscador" method="get" action="buscar_header.php">
+            <input type="search" placeholder="Buscar..." name="titulo">
+        </form>
 </header>

@@ -10,8 +10,6 @@ FROM (
 ) AS registros_combinados
 ORDER BY fecha DESC LIMIT 4";
 $resultado = $conexion->query($query);
-
-
 ?>
 
 

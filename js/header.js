@@ -1,8 +1,8 @@
+
 botones = document.querySelector(".botones");
 buscador = document.querySelector(".buscador");
 boton_desplegar = document.querySelector("#btn-desplegar");
 boton_buscar = document.querySelector("#btn-buscar");
-input_buscador = document.querySelector("#btn-buscar-pc input");
 mediaQuery = window.matchMedia("(width>=1024px)");
 
 desplegar = true;
@@ -38,7 +38,6 @@ mediaQuery.addEventListener("change", (event) => {
     }
 });
 
-
 const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
         targetElement.style.position = "static";
@@ -72,3 +71,6 @@ var botones_movil = document.querySelector('.botones');
 var buscador_movil = document.querySelector('.buscador');
 var banner = document.querySelector('.banner');
 observer.observe(banner);
+
+
+

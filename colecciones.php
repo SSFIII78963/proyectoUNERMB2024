@@ -19,8 +19,7 @@
     <div class="contenedor">
 
         <div id="container-colecciones">
-            <input type="search" placeholder="Buscar" class="buscadorcolecciones">
-
+            
             <?php
             include("php/conexiondb.php");
 
