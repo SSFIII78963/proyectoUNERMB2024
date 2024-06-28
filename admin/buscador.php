@@ -1,3 +1,6 @@
+<?php
+$buscar = $_GET['buscar'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,45 +10,53 @@
 
     <link rel="shortcut icon" href="img/Logo Fondo Editorial.png" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/buscar.css">
+    <link rel="stylesheet" href="css/styletb.css">
+    
 </head>
 <body>
     <?php
-        include ("header.php");
-
-        include("php/bd.php");
-
-        $buscar = $_GET['buscar'];
-        
-        $query = "SELECT * FROM $buscar";
-
-        $resultado = $conexion->query($query);
-
-        echo "<table>";
-
-        $campo = true;
-
-        while ($row = $resultado->fetch_assoc()){
-
-            if ($campo) {
-                echo "<tr>";
-                foreach($row as $campo => $registro){
-                    echo "<th>$campo</th>";
-                }
-                echo "</tr>";
-            }
-
-            echo "<tr>";
-            foreach($row as $campo => $registro){
-                echo "<td>$registro</td>";
-            }
-            echo "<td>";
-            echo $row[$buscar."_id"]; 
-            echo $row[$buscar."_id"]; 
-            echo "</td>";
-        };
-        echo "</table>";
-        
+        include ("header.php");    
+        include_once("borrar_query.php");
     ?>
+
+ <main>
+
+     <h1>busqueda</h1>
+     <div class="input_busqueda">
+         <input type="search"  id="search" placeholder="busqueda...">
+         <input type="hidden"  id=input_get value="<?php echo $buscar?>">
+     </div>
+     <div class="errors" style="display: none;">
+         <p></p>
+     </div>
+     <div class="table_results"  id="tableResults">
+        <table id="results">
+      <?php
+       switch($buscar){
+        case "libro":
+            include "thead/thead_libro.php";
+            break;
+        case "eventos_cientificos":
+            include "thead/thead_evento.php";
+            break;
+        case "noticias":
+        include "thead/thead_noticia.php";
+        break;
+        case "colecciones":
+        include "thead/thead_coleccion.php";
+        break;
+        case "revista":
+            include "thead/thead_revista.php";
+            break;
+       }
+      ?> 
+             <tbody>
+ <!-- se cargaran dinamicamente-->
+             </tbody>
+             
+         </table>
+         </div>
+     </main>
+     <script src="js/search.js"></script>
 </body>
 </html>

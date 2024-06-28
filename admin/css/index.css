@@ -12,6 +12,7 @@ main section{
     align-items: center;
     height: 60vh;
     gap: 2em;
+    background-color: white;
 }
 main button{
     text-align: center;
@@ -31,6 +32,8 @@ main a{
     border-radius: 20px;
     background-color: white;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 main a:hover{
     transform: translateY(-5px);

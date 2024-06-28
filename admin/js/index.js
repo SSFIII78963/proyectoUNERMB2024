@@ -33,12 +33,9 @@ botones_opciones_2.forEach(element => {
         
         if(value_primer_opcion=="buscar"){
             window.location.href = "buscador.php?buscar="+value_segunda_opcion;
-        } if (value_segunda_opcion) {
-            
-        } else {
-            alert("Nada se seleccionó")
+        } if (value_primer_opcion== "agregar") {
+            window.location.href = "agregar.php?agregar="+value_segunda_opcion;
         }
-
     })
 });
 

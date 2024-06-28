@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if($_SESSION["login"] !== "iniciado") {
+    //session_start(); 
+    header ("location: iniciosesion.php");
+}
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +27,7 @@
     ?>
     <main>
         <section id="opciones-1">
-
+ 
             <button>
                 <svg height="100px" width="100px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -50,7 +59,8 @@
                 </svg>
                 <p>Agregar</p>
             </button>
-            <a>
+            <a href="usuario.php">
+           
                 <svg width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -61,10 +71,9 @@
                 </svg>
                 <p>Usuarios</p>
             </a>
-
         </section>
         <section id="opciones-2" style="display: none;">
-
+        
             <button>
                 <svg fill="#000000" width="100px" height="100px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
