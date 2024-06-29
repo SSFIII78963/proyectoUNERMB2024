@@ -9,7 +9,7 @@ include_once 'insertlibro.php';
       <th class="th-blue">link_imagen</th>
       <th class="th-blue">link_libro</th>
       <th class="th-blue" style="width: 20%;">coleccion</th>
-      
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -29,6 +29,7 @@ include_once 'insertlibro.php';
     </tr>
   </tbody>
 </table>
+
 
 <script>
     let div_set =  document.querySelector('.time')

@@ -8,7 +8,7 @@ include_once 'insertrevistas.php';
       <th class="th-blue">sinopsis</th>
       <th class="th-blue">link_imagen</th>
       <th class="th-blue">link_revista</th>
-      
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -20,6 +20,7 @@ include_once 'insertrevistas.php';
     </tr>
   </tbody>
 </table>
+
 
 <script>
     let div_set =  document.querySelector('.time')

@@ -45,20 +45,6 @@ switch ($tabla) {
 } else{
   //nada
   }
-
-// if(!empty($_GET['id'])){
-//   $id_libro = $_GET['id'];
-//   $query_dlt= "DELETE FROM libro WHERE libro_id = $id_libro";
-//   $result = $conn->query($query_dlt);
-//   if($result == 1){
-//     echo "<div class='time'>
-//     <p>se a elimnado exitosamente</p>
-//     </div>";
-    
-//   }else{
-//     echo "se ha producido un error". $result->error;
-//   }
-// }
 $conn->close();
 
 ?>

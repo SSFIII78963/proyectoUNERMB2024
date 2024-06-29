@@ -20,6 +20,7 @@
         <th class="th-blue">nombre</th>
         <th class="th-blue">apellido</th>
         <th class="th-blue">contraseña</th>
+        <th class="th-blue">privilegio</th>
         </tr>
     </thead>
     <tbody>
@@ -35,6 +36,14 @@
         </td>
         <td>
             <input type="password" name="contraseña" maxlength="100" require> 
+        </td>
+
+        <td>
+            <select name="privilegio" require>
+                <option value="" disabled selected>Seleccionar Privilegio</option>
+                <option value="1"> Admin</option>
+                <option value="0">Editor</option>
+            </select> 
         </td>
        
         <td>

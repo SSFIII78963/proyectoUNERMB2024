@@ -8,7 +8,7 @@ include_once 'insertevento_cientifico.php';
       <th class="th-blue">sinopsis_evento</th>
       <th class="th-blue">link_imagen</th>
       <th class="th-blue">link_evento</th>
-      
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -20,6 +20,7 @@ include_once 'insertevento_cientifico.php';
     </tr>
   </tbody>
 </table>
+
 
 <script>
     let div_set =  document.querySelector('.time')

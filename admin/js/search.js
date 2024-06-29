@@ -80,6 +80,7 @@ addEventListener('DOMContentLoaded', ()=>{
                                     <td>${i.sinopsis_coleccion}</td>
                                     <td>${i.link_imagen}</td>
                                     <td>${i.fecha}</td>
+                                    <td>${i.Ult_Actualizacion}</td>
                                     
                                     <div class="centro">
                                     <a onclick="return eliminar()" href="buscador.php?buscar=colecciones&id=${i.colecciones_id}"class="btn_delete">eliminar</a>
@@ -139,7 +140,7 @@ addEventListener('DOMContentLoaded', ()=>{
                                             <td>${i.fecha}</td>
                                             
                                             <div class="centro">
-                                            <a onclick="return eliminar()" href="buscador.php?buscar=revistas&id=${i.revistas_id}"class="btn_delete">eliminar   /a>
+                                            <a onclick="return eliminar()" href="buscador.php?buscar=revistas&id=${i.revistas_id}"class="btn_delete">eliminar</a>
                                             <a href="modificar_querytb.php?buscar=revistas&id=${i.libro_id}" class="btn-blue-modificar">editar</a>
                                             </div>
                                             `

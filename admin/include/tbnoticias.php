@@ -8,7 +8,7 @@ include_once 'insertnoticias.php';
       <th class="th-blue">sinopsis</th>
       <th class="th-blue">link_imagen</th>
       <th class="th-blue">link_noticia</th>
-      
+    </tr>
   </thead>
   <tbody>
     <tr>
